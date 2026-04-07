@@ -7,29 +7,41 @@ export default function StepIndicator({
 }) {
   return (
     <div className="mb-8">
-      {/* Mobile: simple text */}
-      <p className="text-center text-sm text-brand-navy/60 sm:hidden">
-        Step {currentStep + 1} of {STEP_TITLES.length}:{" "}
-        <span className="font-medium text-brand-navy">
-          {STEP_TITLES[currentStep]}
-        </span>
-      </p>
+      {/* Mobile */}
+      <div className="sm:hidden">
+        <div className="flex items-center justify-between rounded-xl bg-white/60 px-4 py-3 border border-brand-navy/[0.06]">
+          <span className="text-xs text-brand-navy/40">
+            Step {currentStep + 1}/{STEP_TITLES.length}
+          </span>
+          <span className="font-heading text-sm font-600 text-brand-navy">
+            {STEP_TITLES[currentStep]}
+          </span>
+        </div>
+        <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-brand-navy/[0.06]">
+          <div
+            className="h-full rounded-full bg-brand-sage transition-all duration-500 ease-out"
+            style={{
+              width: `${((currentStep + 1) / STEP_TITLES.length) * 100}%`,
+            }}
+          />
+        </div>
+      </div>
 
-      {/* Desktop: full stepper */}
+      {/* Desktop */}
       <div className="hidden sm:block">
-        <div className="flex items-center justify-between">
+        <div className="flex items-start justify-between">
           {STEP_TITLES.map((title, i) => {
             const isCompleted = i < currentStep;
             const isCurrent = i === currentStep;
             return (
               <div key={title} className="flex flex-1 flex-col items-center">
                 <div
-                  className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold transition-colors ${
+                  className={`flex h-10 w-10 items-center justify-center rounded-xl text-xs font-bold transition-all duration-300 ${
                     isCompleted
-                      ? "bg-brand-lavender text-brand-navy"
+                      ? "bg-brand-sage/20 text-brand-navy shadow-[0_2px_8px_rgba(200,206,142,0.2)]"
                       : isCurrent
-                        ? "bg-brand-sage text-brand-navy"
-                        : "bg-brand-lavender/30 text-brand-navy/40"
+                        ? "bg-brand-navy text-white shadow-[0_4px_16px_rgba(33,32,76,0.2)]"
+                        : "border border-brand-navy/[0.08] bg-white text-brand-navy/25"
                   }`}
                 >
                   {isCompleted ? (
@@ -41,10 +53,12 @@ export default function StepIndicator({
                   )}
                 </div>
                 <span
-                  className={`mt-1 text-[11px] ${
+                  className={`mt-2 text-center text-[11px] leading-tight transition-colors duration-300 ${
                     isCurrent
-                      ? "font-medium text-brand-navy"
-                      : "text-brand-navy/40"
+                      ? "font-semibold text-brand-navy"
+                      : isCompleted
+                        ? "text-brand-navy/50"
+                        : "text-brand-navy/25"
                   }`}
                 >
                   {title}
@@ -54,9 +68,9 @@ export default function StepIndicator({
           })}
         </div>
         {/* Progress bar */}
-        <div className="mx-auto mt-2 h-1 w-full max-w-md rounded-full bg-brand-lavender/20">
+        <div className="mx-auto mt-4 h-0.5 w-full max-w-md overflow-hidden rounded-full bg-brand-navy/[0.06]">
           <div
-            className="h-1 rounded-full bg-brand-sage transition-all duration-300"
+            className="h-full rounded-full bg-brand-sage transition-all duration-500 ease-out"
             style={{
               width: `${(currentStep / (STEP_TITLES.length - 1)) * 100}%`,
             }}

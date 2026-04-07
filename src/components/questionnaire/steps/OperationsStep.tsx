@@ -11,9 +11,10 @@ export default function OperationsStep({
 }) {
   return (
     <div>
-      <h2 className="mb-6 font-heading text-2xl font-bold text-brand-navy">
+      <h2 className="mb-2 font-heading text-2xl font-700 text-brand-navy">
         Operations
       </h2>
+      <p className="mb-8 text-sm text-brand-navy/40">Help us understand how your business runs day to day.</p>
 
       <FormField
         label="Do you have multiple revenue streams or locations?"

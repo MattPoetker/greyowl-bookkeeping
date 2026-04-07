@@ -11,9 +11,10 @@ export default function BusinessInfoStep({
 }) {
   return (
     <div>
-      <h2 className="mb-6 font-heading text-2xl font-bold text-brand-navy">
-        Tell Us About Your Business
+      <h2 className="mb-2 font-heading text-2xl font-700 text-brand-navy">
+        Tell us about your business
       </h2>
+      <p className="mb-8 text-sm text-brand-navy/40">Help us understand your business so we can tailor our services.</p>
 
       <FormField
         label="What does your business do, how long have you been operating, and what is your current structure?"

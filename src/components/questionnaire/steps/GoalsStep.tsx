@@ -11,9 +11,10 @@ export default function GoalsStep({
 }) {
   return (
     <div>
-      <h2 className="mb-6 font-heading text-2xl font-bold text-brand-navy">
-        Goals & Budget
+      <h2 className="mb-2 font-heading text-2xl font-700 text-brand-navy">
+        Goals & budget
       </h2>
+      <p className="mb-8 text-sm text-brand-navy/40">What does success look like for you?</p>
 
       <FormField
         label="What are your goals for working with a bookkeeper? What would success look like to you?"

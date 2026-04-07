@@ -11,9 +11,10 @@ export default function FutureStep({
 }) {
   return (
     <div>
-      <h2 className="mb-6 font-heading text-2xl font-bold text-brand-navy">
-        Future Plans & Contact Info
+      <h2 className="mb-2 font-heading text-2xl font-700 text-brand-navy">
+        Future plans & contact info
       </h2>
+      <p className="mb-8 text-sm text-brand-navy/40">Almost done! Tell us about your plans and how to reach you.</p>
 
       <FormField
         label="Are you planning to grow your business in the next year? Any big changes coming?"
@@ -41,8 +42,8 @@ export default function FutureStep({
         </select>
       </FormField>
 
-      <div className="mt-8 rounded-xl bg-brand-lavender/10 p-6">
-        <h3 className="mb-4 font-semibold text-brand-navy">
+      <div className="mt-8 rounded-2xl border border-brand-sage/15 bg-brand-sage/[0.04] p-7">
+        <h3 className="mb-5 font-heading text-lg font-600 text-brand-navy">
           How can we reach you?
         </h3>
 

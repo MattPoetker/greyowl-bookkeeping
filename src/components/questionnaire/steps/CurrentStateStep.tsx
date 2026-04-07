@@ -11,9 +11,10 @@ export default function CurrentStateStep({
 }) {
   return (
     <div>
-      <h2 className="mb-6 font-heading text-2xl font-bold text-brand-navy">
-        Your Current Situation
+      <h2 className="mb-2 font-heading text-2xl font-700 text-brand-navy">
+        Your current situation
       </h2>
+      <p className="mb-8 text-sm text-brand-navy/40">Where do things stand with your books today?</p>
 
       <FormField
         label="Are your books up to date? If not, how far behind are they?"

@@ -11,9 +11,10 @@ export default function ServicesStep({
 }) {
   return (
     <div>
-      <h2 className="mb-6 font-heading text-2xl font-bold text-brand-navy">
-        Services & Support
+      <h2 className="mb-2 font-heading text-2xl font-700 text-brand-navy">
+        Services & support
       </h2>
+      <p className="mb-8 text-sm text-brand-navy/40">What kind of help are you looking for?</p>
 
       <FormField
         label="Do you manage payroll? If so, how is it currently processed?"
@@ -63,13 +64,13 @@ export default function ServicesStep({
           {SERVICES_OPTIONS.map((service) => (
             <label
               key={service}
-              className="flex cursor-pointer items-center gap-2 rounded-lg border border-brand-lavender/30 p-2.5 text-sm text-brand-navy transition-colors has-[:checked]:border-brand-sage has-[:checked]:bg-brand-sage/10"
+              className="flex cursor-pointer items-center gap-2.5 rounded-xl border border-brand-navy/[0.06] bg-brand-cream/30 p-3 text-sm text-brand-navy/70 transition-all duration-200 has-[:checked]:border-brand-sage/40 has-[:checked]:bg-brand-sage/[0.06] has-[:checked]:text-brand-navy"
             >
               <input
                 type="checkbox"
                 value={service}
                 {...register("servicesNeeded")}
-                className="rounded border-brand-lavender text-brand-sage focus:ring-brand-sage"
+                className="rounded border-brand-navy/15 text-brand-sage focus:ring-brand-sage/30"
               />
               {service}
             </label>
