@@ -44,11 +44,9 @@ export const questionnaireSchema = z.object({
 export type QuestionnaireData = z.infer<typeof questionnaireSchema>;
 
 export const BUSINESS_STRUCTURES = [
-  "Sole Proprietor",
-  "LLC",
-  "S-Corporation",
-  "C-Corporation",
+  "Sole Proprietorship",
   "Partnership",
+  "Corporation",
   "Non-Profit",
   "Other",
 ] as const;
@@ -69,6 +67,7 @@ export const BUDGET_RANGES = [
 ] as const;
 
 export const SERVICES_OPTIONS = [
+  "Bookkeeping Set Up",
   "Invoicing",
   "Bill Pay",
   "Budgeting",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Button from "@/components/shared/Button";
 import Container from "@/components/shared/Container";
 import SectionHeading from "@/components/shared/SectionHeading";
@@ -24,9 +25,9 @@ const values = [
     ),
   },
   {
-    title: "Technology-Forward",
+    title: "Tech-Savvy Approach",
     description:
-      "We leverage modern tools and our proprietary software to streamline your processes — saving you time and up to $3,000/year.",
+      "We stay on top of the latest tools and best practices to streamline your processes. As a QuickBooks Pro Advisor, we help you get the most out of your software.",
     bg: "bg-brand-sage/8",
     accent: "bg-brand-sage/15",
     icon: (
@@ -48,15 +49,14 @@ const values = [
     ),
   },
   {
-    title: "Transparent Pricing",
+    title: "Monthly Base Packages",
     description:
-      "No hidden fees, no surprises. We'll always be upfront about costs so you can plan with confidence.",
+      "No hourly surprises. We offer flat monthly pricing so you can budget and plan your bookkeeping expenses with confidence. You always know what you're paying.",
     bg: "bg-brand-yellow/10",
     accent: "bg-brand-yellow/20",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
@@ -66,10 +66,10 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative -mt-[72px] overflow-hidden bg-brand-navy pb-24 pt-40 sm:pt-48">
-        <div className="animate-float-slow absolute -right-32 top-0 h-96 w-96 rounded-full bg-brand-lavender opacity-[0.06] blur-[80px]" />
+      <section className="relative -mt-[72px] overflow-hidden bg-gradient-to-br from-brand-lavender-light via-brand-eggshell to-brand-pink-light pb-24 pt-40 sm:pt-48">
+        <div className="animate-float-slow absolute -right-32 top-0 h-96 w-96 rounded-full bg-brand-lavender opacity-[0.12] blur-[80px]" />
         <div
-          className="absolute -bottom-1 left-0 right-0 h-20 bg-brand-cream"
+          className="absolute -bottom-1 left-0 right-0 h-20 bg-brand-eggshell"
           style={{ clipPath: "ellipse(55% 100% at 50% 100%)" }}
         />
         <Container className="relative">
@@ -77,10 +77,10 @@ export default function AboutPage() {
             <span className="animate-entrance mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-brand-sage">
               Our Story
             </span>
-            <h1 className="animate-entrance animate-entrance-delay-1 font-heading text-4xl font-800 leading-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="animate-entrance animate-entrance-delay-1 font-heading text-4xl font-800 leading-tight text-brand-navy sm:text-5xl lg:text-6xl">
               About Grey Owl
             </h1>
-            <p className="animate-entrance animate-entrance-delay-2 mx-auto mt-5 max-w-lg text-lg text-white/50">
+            <p className="animate-entrance animate-entrance-delay-2 mx-auto mt-5 max-w-lg text-lg text-brand-navy/45">
               Wisdom, guidance, and clarity for your finances.
             </p>
           </div>
@@ -88,33 +88,26 @@ export default function AboutPage() {
       </section>
 
       {/* Heather's Story */}
-      <section className="bg-brand-cream py-24">
+      <section className="bg-brand-eggshell py-24">
         <Container>
           <div className="grid items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
-            {/* Photo placeholder */}
             <ScrollReveal>
               <div className="relative mx-auto max-w-sm">
-                <div className="absolute -inset-4 rounded-3xl border border-brand-sage/20" />
-                <div className="absolute -bottom-3 -right-3 h-full w-full rounded-2xl bg-brand-sage/10" />
-                <div className="relative flex aspect-[4/5] items-center justify-center rounded-2xl bg-brand-lavender/15">
-                  <svg
-                    className="h-20 w-20 text-brand-navy/15"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={0.75}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                    />
-                  </svg>
+                <div className="absolute -inset-4 rounded-3xl border border-brand-lavender/20" />
+                <div className="absolute -bottom-3 -right-3 h-full w-full rounded-2xl bg-brand-lavender/10" />
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/heather-family.jpeg"
+                    alt="Heather and her family"
+                    width={400}
+                    height={500}
+                    className="aspect-[4/5] object-cover"
+                    priority
+                  />
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* Bio */}
             <ScrollReveal delay={1}>
               <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-brand-sage">
                 Meet the Founder
@@ -122,14 +115,14 @@ export default function AboutPage() {
               <h2 className="font-heading text-3xl font-800 text-brand-navy sm:text-4xl">
                 Meet Heather
               </h2>
-              <div className="mt-6 space-y-5 text-[16px] leading-relaxed text-brand-navy/60">
+              <div className="mt-6 space-y-5 text-[16px] leading-relaxed text-brand-navy/55">
                 <p>
                   Heather founded Grey Owl Bookkeeping with a simple mission: to
                   help small business owners and non-profit leaders take control
                   of their finances without the stress and confusion.
                 </p>
                 <p>
-                  With years of experience working with organizations of all
+                  With over 10 years of experience working with organizations of all
                   sizes, Heather noticed a pattern — business owners weren&apos;t
                   just looking for someone to &ldquo;do the books.&rdquo; They
                   wanted to understand their numbers, feel confident in their
@@ -159,7 +152,7 @@ export default function AboutPage() {
             {values.map((value, i) => (
               <ScrollReveal key={value.title} delay={Math.min(i + 1, 4) as 1 | 2 | 3 | 4}>
                 <div
-                  className={`group rounded-2xl ${value.bg} border border-brand-navy/[0.04] p-8 transition-all duration-500 hover:shadow-[0_4px_24px_rgba(33,32,76,0.06)]`}
+                  className={`group rounded-2xl ${value.bg} border border-brand-navy/[0.04] p-8 transition-all duration-500 hover:shadow-[0_4px_24px_rgba(212,194,239,0.12)]`}
                 >
                   <div
                     className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl ${value.accent} text-brand-navy transition-transform duration-300 group-hover:scale-110`}
@@ -169,7 +162,7 @@ export default function AboutPage() {
                   <h3 className="mb-2 font-heading text-lg font-700 text-brand-navy">
                     {value.title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-brand-navy/55">
+                  <p className="text-[15px] leading-relaxed text-brand-navy/50">
                     {value.description}
                   </p>
                 </div>
@@ -180,20 +173,20 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-brand-cream py-24">
-        <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-lavender opacity-[0.06] blur-[80px]" />
+      <section className="relative overflow-hidden bg-brand-eggshell py-24">
+        <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-lavender opacity-[0.1] blur-[80px]" />
         <Container className="relative">
           <ScrollReveal>
-            <div className="mx-auto max-w-3xl rounded-3xl border border-brand-navy/[0.06] bg-brand-navy p-12 text-center shadow-[0_20px_60px_rgba(33,32,76,0.15)] sm:p-16">
-              <h2 className="font-heading text-3xl font-800 text-white sm:text-4xl">
+            <div className="mx-auto max-w-3xl rounded-3xl border border-brand-lavender/25 bg-gradient-to-br from-brand-lavender/15 via-brand-pink-light/30 to-brand-eggshell p-12 text-center shadow-[0_20px_60px_rgba(212,194,239,0.15)] sm:p-16">
+              <h2 className="font-heading text-3xl font-800 text-brand-navy sm:text-4xl">
                 Ready to work together?
               </h2>
-              <p className="mx-auto mt-4 max-w-md text-[17px] text-white/50">
+              <p className="mx-auto mt-4 max-w-md text-[17px] text-brand-navy/45">
                 Let&apos;s start with a conversation about your business and how
                 we can help.
               </p>
               <div className="mt-8">
-                <Button href="/questionnaire" variant="secondary" size="lg">
+                <Button href="/questionnaire" size="lg">
                   Fill Out Our Questionnaire
                   <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />

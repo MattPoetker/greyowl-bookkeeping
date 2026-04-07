@@ -1,6 +1,6 @@
 export const SITE_NAME = "Grey Owl Bookkeeping";
 export const SITE_DESCRIPTION =
-  "Stress-free bookkeeping for small businesses and non-profits. Save up to $3,000/year with our proprietary software.";
+  "Stress-free bookkeeping for small businesses and non-profits. Save on QuickBooks with our Pro Advisor discounts.";
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -25,7 +25,7 @@ export const SERVICES = [
   {
     title: "Tax Preparation",
     description:
-      "Expert tax prep for businesses and individuals — no surprises, just savings.",
+      "Expert personal tax prep for individuals — no surprises, just savings.",
     icon: "calculator",
   },
   {
@@ -43,7 +43,7 @@ export const SERVICES = [
   {
     title: "Software Setup",
     description:
-      "We'll set up and optimize your bookkeeping software — and save you up to $3,000/year.",
+      "We'll set up and optimize your QuickBooks — and save you money with our Pro Advisor discounts.",
     icon: "monitor",
   },
 ] as const;
@@ -58,7 +58,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Marcus Johnson",
-    role: "Owner, Johnson's Landscaping LLC",
+    role: "Owner, Johnson's Landscaping",
     quote:
       "I was drowning in receipts and spreadsheets. Heather took it all off my plate and even saved us money on software. Now I can focus on growing my business instead of worrying about the books.",
     rating: 5,

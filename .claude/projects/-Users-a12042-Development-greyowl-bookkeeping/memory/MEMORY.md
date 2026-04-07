@@ -1,2 +1,3 @@
 - [Project Overview](project_overview.md) — Heather's bookkeeping business website, Next.js static site
 - [User Profile](user_matt.md) — Matt, building site for Heather's bookkeeping business
+- [Heather Profile](user_heather.md) — Heather, business owner, Canadian, QB Pro Advisor, 10+ yrs

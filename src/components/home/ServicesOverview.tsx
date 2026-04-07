@@ -16,7 +16,7 @@ const iconMap: Record<string, React.ReactNode> = {
   ),
   calculator: (
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM5.25 6.75a2.25 2.25 0 012.25-2.25h9a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25V6.75z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM5.25 6.75a2.25 2.25 0 012.25-2.25h9a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25V6.75z" />
     </svg>
   ),
   refresh: (
@@ -38,25 +38,16 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const accentBgs = [
   "bg-brand-lavender/15",
-  "bg-brand-pink/15",
-  "bg-brand-sage/15",
+  "bg-brand-pink/12",
+  "bg-brand-sage/12",
   "bg-brand-yellow/20",
   "bg-brand-lavender/15",
-  "bg-brand-pink/15",
-];
-
-const accentBorders = [
-  "group-hover:border-brand-lavender/40",
-  "group-hover:border-brand-pink/40",
-  "group-hover:border-brand-sage/40",
-  "group-hover:border-brand-yellow/40",
-  "group-hover:border-brand-lavender/40",
-  "group-hover:border-brand-pink/40",
+  "bg-brand-pink/12",
 ];
 
 export default function ServicesOverview() {
   return (
-    <section id="services" className="bg-brand-cream py-24 lg:py-32">
+    <section id="services" className="bg-brand-eggshell py-24 lg:py-32">
       <Container>
         <SectionHeading
           tag="What We Do"
@@ -67,9 +58,7 @@ export default function ServicesOverview() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, i) => (
             <ScrollReveal key={service.title} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
-              <div
-                className={`group relative rounded-2xl border border-brand-navy/[0.06] bg-white p-7 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(33,32,76,0.08)] ${accentBorders[i]}`}
-              >
+              <div className="group relative rounded-2xl border border-brand-lavender/20 bg-white p-7 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(212,194,239,0.15)]">
                 <div
                   className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl text-brand-navy transition-transform duration-300 group-hover:scale-110 ${accentBgs[i]}`}
                 >
@@ -78,7 +67,7 @@ export default function ServicesOverview() {
                 <h3 className="mb-2 font-heading text-lg font-600 text-brand-navy">
                   {service.title}
                 </h3>
-                <p className="text-[15px] leading-relaxed text-brand-navy/55">
+                <p className="text-[15px] leading-relaxed text-brand-navy/50">
                   {service.description}
                 </p>
               </div>

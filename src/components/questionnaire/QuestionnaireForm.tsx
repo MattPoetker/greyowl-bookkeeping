@@ -70,7 +70,7 @@ export default function QuestionnaireForm() {
           .map(([k, v]) => `${k}: ${Array.isArray(v) ? v.join(", ") : v}`)
           .join("\n\n")
       );
-      window.location.href = `mailto:hello@greyowlbookkeeping.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:info@greyowlbookkeeping.com?subject=${subject}&body=${body}`;
       setSubmitted(true);
       setSubmitting(false);
       return;
@@ -96,7 +96,7 @@ export default function QuestionnaireForm() {
 
   if (submitted) {
     return (
-      <div className="mx-auto max-w-lg rounded-3xl border border-brand-navy/[0.06] bg-white p-10 text-center shadow-[0_8px_40px_rgba(33,32,76,0.06)] sm:p-12">
+      <div className="mx-auto max-w-lg rounded-3xl border border-brand-lavender/20 bg-white p-10 text-center shadow-[0_8px_40px_rgba(212,194,239,0.1)] sm:p-12">
         <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-sage/15">
           <svg className="h-8 w-8 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -123,7 +123,7 @@ export default function QuestionnaireForm() {
     <form onSubmit={handleSubmit(onSubmit)} noValidate>
       <StepIndicator currentStep={currentStep} />
 
-      <div className="rounded-3xl border border-brand-navy/[0.06] bg-white p-7 shadow-[0_4px_24px_rgba(33,32,76,0.04)] sm:p-10">
+      <div className="rounded-3xl border border-brand-lavender/20 bg-white p-7 shadow-[0_4px_24px_rgba(212,194,239,0.08)] sm:p-10">
         <div
           key={currentStep}
           style={{ animation: "fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)" }}

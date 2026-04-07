@@ -24,7 +24,7 @@ export default function BusinessInfoStep({
           {...register("businessDescription")}
           rows={4}
           className={inputStyles}
-          placeholder="E.g., We're a 5-year-old landscaping company structured as an LLC..."
+          placeholder="E.g., We're a 5-year-old landscaping company structured as a partnership..."
         />
       </FormField>
 
