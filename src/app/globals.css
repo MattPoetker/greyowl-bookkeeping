@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-navy: #21204c;
+  --color-brand-lavender: #d4c2ef;
+  --color-brand-sage: #c8ce8e;
+  --color-brand-yellow: #fff7ae;
+  --color-brand-pink: #f3c0f2;
+  --color-brand-navy-light: #2d2c5e;
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #21204c;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
