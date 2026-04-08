@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Personal Tax Intake",
   description:
     "Quick intake form for personal tax clients. Tell us a bit about yourself and we'll get you started.",
+  openGraph: {
+    title: "Tax Intake Form | Grey Owl Bookkeeping",
+    description:
+      "Quick intake form for personal tax filing. Tell us about yourself and we'll get you started.",
+  },
 };
 
 export default function TaxIntakePage() {

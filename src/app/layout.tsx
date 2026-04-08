@@ -17,18 +17,66 @@ const fraunces = Fraunces({
   style: ["normal", "italic"],
 });
 
+const siteUrl = "https://greyowlbookkeeping.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Grey Owl Bookkeeping | Stress-Free Bookkeeping for Small Businesses & Non-Profits",
+      "Grey Owl Bookkeeping | Education-First Bookkeeping for Small Businesses & Non-Profits",
     template: "%s | Grey Owl Bookkeeping",
   },
   description:
-    "Education-first bookkeeping for small businesses and non-profits. Save up to $3,000/year with our proprietary software. Serving non-profits, sole proprietors, and growing businesses.",
+    "Education-first bookkeeping for small businesses and non-profits. QuickBooks Pro Advisor offering discounted software, monthly base packages, and personal tax preparation across Canada.",
+  keywords: [
+    "bookkeeping",
+    "small business bookkeeping",
+    "non-profit bookkeeping",
+    "QuickBooks Pro Advisor",
+    "personal tax preparation",
+    "tax filing Canada",
+    "bookkeeper",
+    "education-first bookkeeping",
+    "monthly bookkeeping packages",
+    "Grey Owl Bookkeeping",
+  ],
+  authors: [{ name: "Heather Klassen", url: siteUrl }],
+  creator: "Grey Owl Bookkeeping",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_CA",
+    url: siteUrl,
     siteName: "Grey Owl Bookkeeping",
+    title:
+      "Grey Owl Bookkeeping | Education-First Bookkeeping for Small Businesses & Non-Profits",
+    description:
+      "Education-first bookkeeping for small businesses and non-profits. QuickBooks Pro Advisor with discounted software and monthly base packages.",
+    images: [
+      {
+        url: "/images/heather-headshot.jpeg",
+        width: 800,
+        height: 1000,
+        alt: "Heather Klassen, founder of Grey Owl Bookkeeping",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Grey Owl Bookkeeping | Education-First Bookkeeping",
+    description:
+      "Stress-free bookkeeping for small businesses and non-profits. QuickBooks Pro Advisor with discounted software.",
+    images: ["/images/heather-headshot.jpeg"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

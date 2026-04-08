@@ -7,7 +7,12 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 export const metadata: Metadata = {
   title: "Personal Tax Services",
   description:
-    "Personal tax preparation and planning with an education-first approach. We teach you as we file — no jargon, no surprises.",
+    "Personal tax preparation and planning for individuals and families in Canada. T1 returns, CRA support, prior-year amendments, and tax education.",
+  openGraph: {
+    title: "Personal Tax Services | Grey Owl Bookkeeping",
+    description:
+      "Personal tax preparation with an education-first approach. T1 returns, CRA support, and tax planning for individuals and families.",
+  },
 };
 
 const services = [

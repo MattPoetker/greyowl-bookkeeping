@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Client Questionnaire",
   description:
     "Tell us about your business so we can tailor our bookkeeping services to your needs. Quick, easy, and confidential.",
+  openGraph: {
+    title: "Get Started | Grey Owl Bookkeeping",
+    description:
+      "Fill out our quick questionnaire and let us prepare a tailored bookkeeping solution for your business.",
+  },
 };
 
 export default function QuestionnairePage() {

@@ -8,7 +8,20 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 export const metadata: Metadata = {
   title: "About Heather",
   description:
-    "Meet Heather, the founder of Grey Owl Bookkeeping. Education-first bookkeeping for small businesses and non-profits.",
+    "Meet Heather Klassen, founder of Grey Owl Bookkeeping. Over 10 years of education-first bookkeeping for small businesses and non-profits.",
+  openGraph: {
+    title: "About Heather | Grey Owl Bookkeeping",
+    description:
+      "Meet Heather Klassen, founder of Grey Owl Bookkeeping. Over 10 years of education-first bookkeeping experience.",
+    images: [
+      {
+        url: "/images/heather-family.jpeg",
+        width: 800,
+        height: 1000,
+        alt: "Heather Klassen and her family",
+      },
+    ],
+  },
 };
 
 const values = [
