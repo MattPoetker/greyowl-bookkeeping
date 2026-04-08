@@ -1,8 +1,9 @@
 "use client";
 
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NAV_LINKS } from "@/lib/constants";
 
 export default function MobileMenu({
@@ -13,9 +14,18 @@ export default function MobileMenu({
   onClose: () => void;
 }) {
   const pathname = usePathname();
+  const prevPathname = useRef(pathname);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    onClose();
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (prevPathname.current !== pathname) {
+      prevPathname.current = pathname;
+      onClose();
+    }
   }, [pathname, onClose]);
 
   useEffect(() => {
@@ -29,18 +39,20 @@ export default function MobileMenu({
     };
   }, [open]);
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 md:hidden">
+  return createPortal(
+    <div className="fixed inset-0 z-[9999] md:hidden">
+      {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-brand-navy/30 backdrop-blur-sm"
+        className="absolute inset-0 bg-brand-navy/50"
         onClick={onClose}
         style={{ animation: "fadeIn 0.2s ease" }}
       />
 
+      {/* Panel */}
       <div
-        className="fixed right-0 top-0 flex h-full w-72 flex-col bg-white p-8 shadow-2xl"
+        className="absolute right-0 top-0 flex h-full w-72 flex-col bg-[#f5f0ff] p-8 shadow-2xl"
         style={{ animation: "fadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1)" }}
       >
         <button
@@ -87,6 +99,7 @@ export default function MobileMenu({
           </p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

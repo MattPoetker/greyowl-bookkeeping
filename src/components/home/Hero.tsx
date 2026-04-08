@@ -40,12 +40,11 @@ export default function Hero() {
             <h1 className="animate-entrance animate-entrance-delay-1 font-heading text-4xl font-800 leading-[1.1] tracking-tight text-brand-navy sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
               Your Books,{" "}
               <span className="relative inline-block text-brand-navy">
-                Handled
+                Handled.
                 <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 200 8" fill="none" preserveAspectRatio="none">
                   <path d="M0 7 Q50 0 100 4 Q150 8 200 2" stroke="#c8ce8e" strokeWidth="3" strokeLinecap="round" fill="none" opacity="0.7" />
                 </svg>
               </span>
-              .
               <br />
               Your Business,{" "}
               <span className="text-brand-navy/70">Empowered</span>.

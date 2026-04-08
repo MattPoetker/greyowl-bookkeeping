@@ -50,17 +50,17 @@ export const SERVICES = [
 
 export const TESTIMONIALS = [
   {
+    name: "Megan Kropp",
+    role: "Owner, Sparkling Homes",
+    quote:
+      "We have been using Grey Owl Bookkeeping for over two years now, and it's been a game-changer for scaling our cleaning business. Heather is amazingly gifted at organizing our books, allowing us to stay on target and move toward our goals. Heather is responsive, knowledgeable, and always willing to explain things in simple terms.",
+    rating: 5,
+  },
+  {
     name: "Sarah Mitchell",
     role: "Executive Director, Bright Futures Non-Profit",
     quote:
       "Heather transformed our financial chaos into clarity. For the first time in years, our board has confidence in our numbers. She didn't just do our books — she taught us how to read them.",
-    rating: 5,
-  },
-  {
-    name: "Marcus Johnson",
-    role: "Owner, Johnson's Landscaping",
-    quote:
-      "I was drowning in receipts and spreadsheets. Heather took it all off my plate and even saved us money on software. Now I can focus on growing my business instead of worrying about the books.",
     rating: 5,
   },
   {

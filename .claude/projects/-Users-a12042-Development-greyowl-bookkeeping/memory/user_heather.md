@@ -4,7 +4,7 @@ description: Heather is the owner of Grey Owl Bookkeeping, Canadian business, Qu
 type: user
 ---
 
-- Owner of Grey Owl Bookkeeping (Canadian business, not US)
+- Heather Klassen, Owner of Grey Owl Bookkeeping (Canadian business, not US)
 - QuickBooks Pro Advisor — offers discounted software subscriptions to clients (not proprietary software yet)
 - Over 10 years of experience
 - Does NOT file business tax returns — only personal/individual tax returns

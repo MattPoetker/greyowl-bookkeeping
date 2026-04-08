@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -27,7 +28,14 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
         <Link href="/" className="group flex items-center gap-3">
-          <OwlLogo />
+          <Image
+            src="/images/owl-logo.svg"
+            alt="Grey Owl logo"
+            width={40}
+            height={40}
+            className="transition-transform duration-300 group-hover:scale-105"
+            priority
+          />
           <div className="flex flex-col">
             <span className="font-heading text-lg font-700 leading-tight text-brand-navy">
               Grey Owl
@@ -87,36 +95,3 @@ export default function Header() {
   );
 }
 
-function OwlLogo() {
-  return (
-    <svg
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
-      fill="none"
-      className="transition-transform duration-300 group-hover:scale-105"
-    >
-      {/* Body */}
-      <ellipse cx="20" cy="22" rx="12" ry="14" fill="#d4c2ef" opacity="0.35" />
-      <ellipse cx="20" cy="22" rx="10" ry="12" fill="#d4c2ef" opacity="0.25" />
-
-      {/* Ear tufts */}
-      <path d="M10 10 L14 16 L8 15Z" fill="#c8ce8e" opacity="0.5" />
-      <path d="M30 10 L26 16 L32 15Z" fill="#c8ce8e" opacity="0.5" />
-
-      {/* Eyes */}
-      <circle cx="15" cy="19" r="4.5" fill="#d4c2ef" opacity="0.5" />
-      <circle cx="25" cy="19" r="4.5" fill="#d4c2ef" opacity="0.5" />
-      <circle cx="15" cy="19" r="2.5" fill="#21204c" />
-      <circle cx="25" cy="19" r="2.5" fill="#21204c" />
-      <circle cx="16" cy="18" r="0.8" fill="white" opacity="0.8" />
-      <circle cx="26" cy="18" r="0.8" fill="white" opacity="0.8" />
-
-      {/* Beak */}
-      <path d="M18 24 L20 27 L22 24" fill="#c8ce8e" opacity="0.7" />
-
-      {/* Chest */}
-      <ellipse cx="20" cy="30" rx="5" ry="4" fill="#f3c0f2" opacity="0.12" />
-    </svg>
-  );
-}
