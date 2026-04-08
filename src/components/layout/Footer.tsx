@@ -22,12 +22,12 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex gap-3">
               <SocialLink
-                href="#"
+                href="https://www.facebook.com/greyowlbookkeeping"
                 label="Facebook"
                 d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
               />
               <SocialLink
-                href="#"
+                href="https://www.instagram.com/greyowl_bookkeeping"
                 label="Instagram"
                 d="M16 4H8a4 4 0 00-4 4v8a4 4 0 004 4h8a4 4 0 004-4V8a4 4 0 00-4-4zm-4 11a3 3 0 110-6 3 3 0 010 6zm3.5-6.5a1 1 0 110-2 1 1 0 010 2z"
               />
