@@ -57,6 +57,13 @@ export const TESTIMONIALS = [
     rating: 5,
   },
   {
+    name: "Robin McMillin",
+    role: "Director, Total Freedom Ministries",
+    quote:
+      "I've had the pleasure to partner with Heather and Grey Owl Bookkeeping for three years now. She is genuinely good at what she does and always has a helpful attitude. If you're looking for a bookkeeper who really understands the numbers and cares about her clients, I highly recommend Heather.",
+    rating: 5,
+  },
+  {
     name: "Sarah Mitchell",
     role: "Executive Director, Bright Futures Non-Profit",
     quote:
