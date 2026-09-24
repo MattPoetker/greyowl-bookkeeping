@@ -6,7 +6,13 @@
   --color-brand-lavender: #d4c2ef;
   --color-brand-lavender-light: #ece4f7;
   --color-brand-sage: #c8ce8e;
+  --color-brand-sage-light: #eef0d9;
   --color-brand-yellow: #fff7ae;
+  --color-brand-yellow-light: #fffbd9;
+  --color-brand-yellow-deep: #efd96b;
+  --color-brand-coral: #f2a39b;
+  --color-brand-coral-light: #fde6e3;
+  --color-brand-coral-dark: #b54a42;
   --color-brand-pink: #f3c0f2;
   --color-brand-pink-light: #fbe4fb;
   --color-brand-cream: #faf7f0;
@@ -100,6 +106,58 @@ body::before {
 .animate-float-slow { animation: float 8s ease-in-out infinite; }
 .animate-float-slower { animation: float 10s ease-in-out infinite; }
 .animate-pulse-soft { animation: pulse-soft 4s ease-in-out infinite; }
+
+/* ── Hand-drawn Marks (review report) ─────────── */
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes marker-swipe {
+  to { background-size: 100% 100%; }
+}
+
+.scribble {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 1.1s cubic-bezier(0.65, 0, 0.35, 1) 0.9s forwards;
+}
+
+.marker {
+  background-image: linear-gradient(
+    transparent 50%,
+    rgba(255, 236, 130, 0.85) 50%,
+    rgba(255, 236, 130, 0.85) 92%,
+    transparent 92%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  animation: marker-swipe 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+/* Inside a ScrollReveal, wait until the block scrolls into view */
+.reveal .scribble,
+.reveal .marker {
+  animation-play-state: paused;
+}
+
+.reveal.revealed .scribble,
+.reveal.revealed .marker {
+  animation-play-state: running;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scribble {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .marker {
+    animation: none;
+    background-size: 100% 100%;
+  }
+}
 
 /* ── Testimonial Quote Mark ──────────────────── */
 .quote-mark::before {

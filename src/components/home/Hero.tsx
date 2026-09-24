@@ -57,8 +57,8 @@ export default function Hero() {
             </p>
 
             <div className="animate-entrance animate-entrance-delay-3 mt-10 flex flex-col gap-4 sm:flex-row">
-              <Button href="/questionnaire" size="lg">
-                Get Started Today
+              <Button href="/free-review" size="lg">
+                Get My FREE Bookkeeping Review
                 <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

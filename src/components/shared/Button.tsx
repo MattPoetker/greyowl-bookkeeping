@@ -2,7 +2,7 @@ import Link from "next/link";
 
 type ButtonProps = {
   variant?: "primary" | "secondary" | "outline" | "ghost";
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
   href?: string;
   children: React.ReactNode;
   className?: string;
@@ -26,6 +26,7 @@ const sizeStyles = {
   sm: "px-5 py-2 text-sm",
   md: "px-7 py-3 text-[15px]",
   lg: "px-9 py-4 text-base",
+  xl: "px-11 py-5 text-lg",
 };
 
 export default function Button({

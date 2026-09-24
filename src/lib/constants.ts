@@ -6,6 +6,7 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/personal-tax", label: "Personal Tax" },
+  { href: "/free-review", label: "Free Review" },
   { href: "/questionnaire", label: "Get Started" },
 ] as const;
 

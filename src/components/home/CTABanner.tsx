@@ -1,6 +1,17 @@
 import Button from "@/components/shared/Button";
 import Container from "@/components/shared/Container";
 import ScrollReveal from "@/components/shared/ScrollReveal";
+import OfferName from "@/components/review/OfferName";
+import ReportPreview from "@/components/review/ReportPreview";
+import ReviewIcon from "@/components/review/ReviewIcon";
+import { TONES, type Tone } from "@/components/review/tones";
+
+const reportParts: { tone: Tone; label: string }[] = [
+  { tone: "good", label: "What's working" },
+  { tone: "attention", label: "What needs attention" },
+  { tone: "flag", label: "Red flags to deal with now" },
+  { tone: "fix", label: "The 3 fixes to make first" },
+];
 
 export default function CTABanner() {
   return (
@@ -9,23 +20,52 @@ export default function CTABanner() {
 
       <Container className="relative">
         <ScrollReveal>
-          <div className="mx-auto max-w-3xl rounded-3xl border border-brand-lavender/25 bg-gradient-to-br from-brand-lavender/15 via-brand-pink-light/30 to-brand-eggshell p-12 text-center shadow-[0_20px_60px_rgba(212,194,239,0.15)] sm:p-16">
-            <h2 className="font-heading text-3xl font-800 leading-tight text-brand-navy sm:text-4xl lg:text-[2.75rem]">
-              Ready to take bookkeeping
-              <br />
-              <span className="text-brand-navy/60">off your plate?</span>
-            </h2>
-            <p className="mx-auto mt-5 max-w-md text-[17px] leading-relaxed text-brand-navy/45">
-              Fill out our quick questionnaire and let&apos;s find the perfect
-              bookkeeping solution for your business.
-            </p>
-            <div className="mt-10">
-              <Button href="/questionnaire" size="lg">
-                Start Your Free Consultation
-                <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Button>
+          <div className="mx-auto grid max-w-5xl items-center gap-14 overflow-hidden rounded-3xl border border-brand-lavender/25 bg-gradient-to-br from-brand-lavender/15 via-brand-pink-light/30 to-brand-eggshell p-8 shadow-[0_20px_60px_rgba(212,194,239,0.15)] sm:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:p-14">
+            <div>
+              <OfferName className="mb-6 text-xl sm:text-2xl" />
+
+              <h2 className="font-heading text-3xl font-800 leading-tight text-brand-navy sm:text-4xl lg:text-[2.75rem]">
+                Are your books actually right?
+                <br />
+                <span className="text-brand-navy/60">Find out in one page.</span>
+              </h2>
+              <p className="mt-5 max-w-md text-[17px] leading-relaxed text-brand-navy/50">
+                Heather will spend 30 minutes going through your books, then
+                email you a one-page report in plain English:
+              </p>
+
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {reportParts.map((part) => {
+                  const tone = TONES[part.tone];
+                  return (
+                    <li key={part.tone} className="flex items-center gap-3 text-[15px] font-medium text-brand-navy/70">
+                      <span className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg ${tone.chip} ${tone.iconColor}`}>
+                        <ReviewIcon name={tone.icon} className="h-4 w-4" strokeWidth={2} />
+                      </span>
+                      {part.label}
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <div className="mt-10">
+                <Button href="/free-review" size="lg">
+                  Find My Red Flags
+                  <ReviewIcon name="arrowRight" className="ml-2 h-4 w-4" strokeWidth={2} />
+                </Button>
+              </div>
+              <p className="mt-4 text-xs text-brand-navy/40">
+                No cost, no obligation, no sales call. Just straight answers
+                from a QuickBooks Pro Advisor.
+              </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-sm pt-4 lg:max-w-none">
+              <ReportPreview compact className="rotate-[2deg]" />
+              <div className="animate-float absolute -top-2 left-0 flex items-center gap-2 rounded-full border border-brand-lavender/30 bg-white px-4 py-2 text-xs font-semibold text-brand-navy shadow-[0_8px_24px_rgba(212,194,239,0.35)] sm:-left-6">
+                <ReviewIcon name="clock" className="h-4 w-4 text-brand-navy/50" />
+                30-minute review
+              </div>
             </div>
           </div>
         </ScrollReveal>
